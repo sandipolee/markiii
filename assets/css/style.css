@@ -256,7 +256,7 @@ h6 {
 --------------------------------------------------------------*/
 
 #c-hero {
-    background: url(file:///C:/Users/Sandip/Desktop/mark-1-master/assets/img/hero.jpg);
+    background: url(../img/hero.jpg);
     background-size: cover;
     background-position: center;
     padding: 100px 30px 100px 30px;
@@ -374,4 +374,18 @@ h6 {
         width: auto;
         padding-right: 20px 15px;
     }
+}
+
+
+/*--------------------------------------------------------------
+# preeti
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# quotes
+--------------------------------------------------------------*/
+
+#row-box {
+    justify-content: space-around;
 }

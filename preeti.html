@@ -85,13 +85,17 @@
                 <div class="container row">
                     <div class="col-md-8">
                         <div class="h-post-active">
-                            <h2>preeti unicode</h2>
-                            <textarea class="container" name="TextToConvert" id="legacy_text" onkeyup="convert_to_unicode()">
-                                
-                            </textarea>
+                            <h2 class="text-primary font-weight-bold">Preeti Unicode</h2>
+                            <textarea class="container" rows="7" name="TextToConvert" id="legacy_text" placeholder="Type or paste preeti text" onkeyup="convert_to_unicode()"></textarea>
                             <select style="display: none;" id="text_or_html">
                                 <option selected="selected">You Will Seen Preeti Fonts </option></select>
-                            <textarea class="container" name="ConvertedText" id="unicode_text"></textarea>
+                            <textarea class="container" rows="7" name="ConvertedText" onclick="allcopy()" placeholder="Click to copy" id="unicode_text"></textarea>
+                        </div>
+                        <div class="h-post">
+                            <h2 class="f-b">What is Preeti Unicodeder</h2>
+                            <p>"Preeti to Unicode Converter converts traditional nepali font Preeti to nepali unicode. Also convert other popular fonts like Kantipur to unicode, Kanchan to unicode, Mangal to unicode, Sagarmatha to unicode. As unicode is
+                                a machine readable font, which is widely used in email, internet and smart devices. Any Nepali font in nepali unicode is easily displayed in any computer and smartphones. It is an excellent idea & always prefer to convert
+                                tradational fonts like preeti font to unicode before sending or publishing any document in email or internet .</p>
                         </div>
 
                     </div>
@@ -128,7 +132,7 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
-        <script src="./preeti.js"></script>
+        <script src="./assets/js/preeti.js"></script>
 
     </body>
 

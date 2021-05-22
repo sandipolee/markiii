@@ -11,7 +11,7 @@ function check() {
     if (n === 0) {
         document.getElementById("pre").setAttribute("class", "btn btn-primary col-md-2 m-auto  mr-auto ml-auto mt-3 disabled")
     } else {
-        document.getElementById("pre").setAttribute("class", "btn btn-primary col-md-2 m-auto mr-auto ml-auto mt-3 ")
+        document.getElementById("pre").setAttribute("class", "btn btn-primary col-md-2 m-auto mr-auto ml-auto mt-3")
     }
 }
 

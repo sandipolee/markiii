@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Learn things with playing games.</title>
+    <title>It's website made by sandip to provide various services like preeti to unicode</title>
     <meta content="Sandip Olee" name="It's website made by sandip to provide various services like preeti to unicode">
     <meta content="" name="keywords">
 
@@ -23,6 +23,7 @@
     <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/quize.css">
 
 
 
@@ -49,7 +50,7 @@
                     <ul>
                         <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
                         <li><a href="#about"><i class="bx bxs-news"></i> <span>Blog</span></a></li>
-                        <li><a href="./startquiz.html"><i class="bx bx-joystick"></i> Quiz</a></li>
+                        <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
                         <li><a href="./download.html"><i class="bx bx-download"></i> Ddwnload</a></li>
                         <li><a href="./quotes.html"><i class='bx bxs-heart'></i>Status</a></li>
 
@@ -63,68 +64,16 @@
         </header>
         <!-- End Header -->
         <main id="main">
-            <section>
-                <div id="c-hero">
-                    <div id="c-row" class="row container">
-                        <div id="status" class="c-card col-md-4 mt-2  mt-3">
-                            <i class='bx bxs-heart-circle bx-md'></i>
-                            <a href="./quotes.html">
-                                <p class="color-light"> Status </p>
-                            </a>
-
-                        </div>
-                        <div id="tools" class="c-card col-md-3 m-auto mt-3">
-                            <i class='bx bxs-grid-alt bx-md'></i>
-                            <p class="color-light"> Tools </p>
-                        </div>
-                        <div id="download" class="c-card col-md-4 m-auto mt-3">
-                            <i class='bx bxs-cloud-download bx-md'></i>
-                            <p class="color-light"> Download </p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </section>
             <section id="home-post">
-                <div class="container row">
-                    <div class="col-md-8">
-                        <article class="h-post-active">
-                            <h2 class="text-info">What is Web Design? </h2>
-                            <p>Web design refers to the design of websites that are displayed on the internet. It usually refers to the user experience aspects of website development rather than software development. Web design used to be focused on designing
-                                websites for desktop browsers; however, since the mid-2010s, design for mobile and tablet browsers has become ever-increasingly important. of the finished product.</p>
-
-                        </article>
-                        <article class="h-post ">
-                            <h2 class="text-info">Top 5 Programming languages for Web development in 2021?
-                            </h2>
-                            <p>Without wasting any more of your time, here is a list of best programming languages for web development, In the order of their importance and popularity.</p>
-
-                        </article>
-                        <article class="h-post mt-5">
-                            <h2 class="text-info">Top 5 animation library for Web?
-                            </h2>
-                            <p>Without wasting any more of your time, here is alist of top animation library for web development, In the order of their importance and popularity.</p>
-
-                        </article>
-
-                    </div>
-                    <div class="col-md-3 mr-auto ml-auto  ">
-                        <div id="r-post">
-                            <h4 class="text-primary">Go Directlly</h4>
-                            <p>Preeti Unicodeder</p>
-                            <p>Top 5 animation library for web</p>
-                            <p>Download Nepali Fonts</p>
-                            <p>Important Websites for Digners</p>
-                            <p>Play Quize</p>
-                            <p>Movies you should watch in </p>
-                            <p>Preeti Unicodeder 2022</p>
-                            <p>Important links</p>
-                        </div>
-
-                    </div>
-
+                <div class="result container">
+                    <h2 id="user_name"></h2>
+                    <h2 id="score"></h2>
+                    <h2 id="correctAnswer"></h2>
+                    <h2 id="WrongAnswer"></h2>
+                    <button class="btn" onclick="restart()">Play Again</button>
+                    <button class="btn" onclick="checkAnswer()">Check Answer</button>
                 </div>
+                <div class="container"></div>
             </section>
         </main>
 
@@ -148,6 +97,8 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
+        <!--- quiz js-->>
+        <script src="./assets/js/quizresult.js"></script>
 
     </body>
 

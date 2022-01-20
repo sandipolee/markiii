@@ -1,0 +1,73 @@
+.options {
+    padding: 10px;
+    order: 3;
+}
+
+.controls {
+    padding: 10px;
+    order: 4;
+}
+
+.btn {
+    font-size: large;
+    font-weight: bold;
+    box-shadow: 0 6px 12px -2px rgba(#F27813, .15);
+    background: #EF9614;
+    border-radius: 30px;
+    padding: 10px 30px 10px 30px;
+    color: beige;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.score {
+    font-size: large;
+    font-weight: bold;
+}
+
+#user-score {
+    color: #EF9614;
+}
+
+#total-score {
+    color: #F6490F
+}
+
+
+/* options in quiz game */
+
+.options {
+    list-style: none;
+}
+
+.options li {
+    padding: 10px 0px 10px 30px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    color: #000;
+    border: 2px solid #EF9614;
+    background: #fff;
+}
+
+.options li:hover {
+    color: #fff;
+    background: #EF9614;
+}
+
+.activequiz {
+    color: #fff !important;
+    background: #EF9614 !important;
+}
+
+#correctAnswer {
+    color: green;
+}
+
+#WrongAnswer {
+    color: red;
+}

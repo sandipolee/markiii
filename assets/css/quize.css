@@ -1,7 +1,26 @@
-#name-bar {
+.hero-boost {
+    height: 70vh;
+}
+
+.name-bar {
     padding-top: 20px;
     display: flex;
     justify-content: center;
+}
+
+#option-size {
+    width: 30%;
+    outline-color: #EF9614 !important;
+}
+
+#option-size:hover {
+    outline-color: #EF9614 !important;
+}
+
+@media (max-width: 556px) {
+    #option-size {
+        width: 80%;
+    }
 }
 
 #user-name {
@@ -13,6 +32,7 @@
     text-align: center;
     color: #EF9614;
     font-size: 1.5rem;
+    background: none;
 }
 
 #user-name:hover {

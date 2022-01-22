@@ -68,7 +68,7 @@ h2.innerHTML = `Welcome  ${user_Name} `;
 
 function show() {
     let question_area = document.querySelector("#questionArea");
-    question_area.innerHTML = `<h4>${currentQuestion + 1}. ${questions[currentQuestion]["question"]} </h4>
+    question_area.innerHTML = `<h5>${currentQuestion + 1}. ${questions[currentQuestion]["question"]} </h5>
     
     <ul class="options col-md-4">
     <li class="optionQ" id="0">${questions[currentQuestion]["answers"][0]} </li>

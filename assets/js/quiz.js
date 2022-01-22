@@ -8,12 +8,12 @@ let correctans_count = 0;
 let Wrongans_count = 0;
 
 let questions = [{
-        question: "What is the scientific name of a butterfly?",
+        question: "Bank of England  कहिले स्थापना भएको हो ?",
         answers: [
-            "Apis",
-            "Coleoptera",
-            "Formicidae",
-            "Rhopalocera"
+            "1668 AD",
+            "1632 AD",
+            "1407 AD",
+            "1694 AD"
         ],
         correctIndex: 3
     },
@@ -50,13 +50,40 @@ let questions = [{
 ]
 
 
+// --------- start button----------
+
+
+
 function startquiz() {
 
     let userName = document.getElementById("user-name").value;
+    if (userName == "") {
 
-    sessionStorage.setItem("userName", userName);
-    location.href = "quiz.html"
+        let user_Name_area = document.getElementById("user-name");
+        user_Name_area.classList.remove("color-quiz")
+        user_Name_area.classList.add("color-missing")
+        toast();
 
+    } else {
+        sessionStorage.setItem("userName", userName);
+        location.href = "quiz.html"
+    }
+
+
+
+}
+// toast function
+
+
+function toast() {
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
 }
 
 
@@ -82,6 +109,7 @@ function show() {
 }
 document.querySelector("#question-count").innerHTML = ` ${currentQuestion + 1} / ${questions.length}`;
 show();
+
 
 
 

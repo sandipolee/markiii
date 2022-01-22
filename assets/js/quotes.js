@@ -22,7 +22,7 @@ function fetchData() {
             return response.json();
         })
         .then(function(data) {
-            console.log(data);
+
             prinrthis(data)
         });
 }

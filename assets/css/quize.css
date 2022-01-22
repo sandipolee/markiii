@@ -1,11 +1,22 @@
-.options {
-    padding: 10px;
-    order: 3;
+#name-bar {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-.controls {
-    padding: 10px;
-    order: 4;
+#user-name {
+    outline: none;
+    border-bottom: 2px solid #EF9614;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    color: #EF9614;
+    font-size: 1.5rem;
+}
+
+#user-name:hover {
+    outline: none;
 }
 
 .btn {

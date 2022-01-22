@@ -50,7 +50,7 @@
                     <ul>
                         <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
                         <li><a href="#about"><i class="bx bxs-news"></i> <span>Blog</span></a></li>
-                        <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+                        <li><a href="./startquiz.html"><i class="bx bx-joystick"></i> Quiz</a></li>
                         <li><a href="./download.html"><i class="bx bx-download"></i> Ddwnload</a></li>
                         <li><a href="./quotes.html"><i class='bx bxs-heart'></i>Status</a></li>
 
@@ -64,11 +64,16 @@
         </header>
         <!-- End Header -->
         <main id="main">
+            <section>
+                <div id="c-hero">
+                </div>
+            </section>
             <section id="home-post">
+                <div class="container" id="name-bar">
+                    <input type="text" placeholder="name" id="user-name">
+                    <button class="btn btn-submit" onclick="startquiz()">start</button>
+                </div>
 
-                <label for="name">name</label>
-                <input type="text" id="user-name">
-                <button class="btn btn-submit" onclick="startquiz()">start</button>
 
             </section>
         </main>

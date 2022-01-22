@@ -55,6 +55,10 @@
     transform: 0.5s;
 }
 
+.color-missing::placeholder {
+    color: red;
+}
+
 #user-name:hover {
     outline: none;
 }

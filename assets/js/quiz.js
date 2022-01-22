@@ -7,7 +7,7 @@ let score = 0;
 let correctans_count = 0;
 let Wrongans_count = 0;
 
-let questions = [{
+let questionse = [{
         question: "Bank of England  कहिले स्थापना भएको हो ?",
         answers: [
             "1668 AD",
@@ -50,6 +50,7 @@ let questions = [{
 ]
 
 
+
 // --------- start button----------
 
 
@@ -88,15 +89,18 @@ function toast() {
 
 
 
+
 let user_Name = sessionStorage.getItem("userName");
 let h2 = document.getElementById("welcome-name");
 h2.innerHTML = `Welcome  ${user_Name} `;
 
 
-function show() {
+function show(Ndata) {
     let question_area = document.querySelector("#questionArea");
+    let questions = Ndata;
+    console.log(questions.length)
     question_area.innerHTML = `<h5>${currentQuestion + 1}. ${questions[currentQuestion]["question"]} </h5>
-    
+
     <ul class="options col-md-4">
     <li class="optionQ" id="0">${questions[currentQuestion]["answers"][0]} </li>
     <li class="optionQ" id="1">${questions[currentQuestion]["answers"][1]} </li>
@@ -107,10 +111,19 @@ function show() {
 
     toogleclick();
 }
-document.querySelector("#question-count").innerHTML = ` ${currentQuestion + 1} / ${questions.length}`;
-show();
+// document.querySelector("#question-count").innerHTML = ` ${currentQuestion + 1} / ${questions.length}`;
+fetchData()
 
-
+function fetchData() {
+    fetch("./assets/json/quize.json")
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            console.log("going ")
+            show(data);
+        });
+}
 
 
 

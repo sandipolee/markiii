@@ -133,14 +133,13 @@
     /* Set a default minimum width */
     margin-left: -125px;
     /* Divide value of min-width by 2 */
-    border-radius: 30px;
     background-color: rgb(219, 61, 61);
     /* Black background color */
     color: #fff;
     /* White text color */
     text-align: center;
     /* Centered text */
-    border-radius: 2px;
+    border-radius: 30px;
     /* Rounded borders */
     padding: 16px;
     /* Padding */

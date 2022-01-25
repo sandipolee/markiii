@@ -1,6 +1,8 @@
 const nextBtn = document.getElementById("next");
 const questionText = document.getElementById("question-text")
 const answeroptions = document.getElementById("answeroptions")
+let quiz_data_get = sessionStorage.getItem("quizdata");
+let quiz_data = "./assets/json/quizdata/" + quiz_data_get;
 
 let currentQuestion = 0;
 let score = 0;
@@ -41,12 +43,12 @@ function show(Ndata) {
 fetchData()
 
 function fetchData() {
-    fetch("./assets/json/quize.json")
+
+    fetch(quiz_data)
         .then(function(response) {
             return response.json();
         })
         .then(function(data) {
-            console.log("going ")
             show(data);
         });
 }
@@ -59,7 +61,7 @@ function fetchData() {
 
 
 function next() {
-    fetch("./assets/json/quize.json")
+    fetch(quiz_data)
         .then(function(response) {
             return response.json();
 

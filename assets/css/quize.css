@@ -248,3 +248,17 @@
 .result-header {
     height: 20vh;
 }
+
+
+/* hero of quiz */
+
+#Quiz-hero {
+    background: url(../img/quiz-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 30px 100px 30px;
+}
+
+#quiz-item {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}

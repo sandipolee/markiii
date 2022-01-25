@@ -109,8 +109,34 @@
     background: #fff;
 }
 
+.optionQ {
+    padding: 10px 0px 10px 30px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    color: #000;
+    border: 2px solid;
+    background: #fff;
+}
+
+.border-danger {
+    border-color: red !important;
+    color: red !important;
+}
+
+.border-green-act {
+    border-color: green !important;
+    color: #fff !important;
+    background: green !important;
+}
+
+.border-green {
+    border-color: green !important;
+    color: green !important;
+}
+
 .options li:hover {
-    color: #fff;
+    color: #fff !important;
     background: #EF9614;
 }
 
@@ -214,4 +240,11 @@
         bottom: 0;
         opacity: 0;
     }
+}
+
+
+/* result page */
+
+.result-header {
+    height: 20vh;
 }

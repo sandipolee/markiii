@@ -7,58 +7,23 @@ let score = 0;
 let correctans_count = 0;
 let Wrongans_count = 0;
 
+let users_answers = [];
 
+// for number of questions selected by use
 
-
-
-// --------- start button----------
-
-
-
-function startquiz() {
-
-    let userName = document.getElementById("user-name").value;
-    if (userName == "") {
-
-        let user_Name_area = document.getElementById("user-name");
-        user_Name_area.classList.remove("color-quiz")
-        user_Name_area.classList.add("color-missing")
-        toast();
-
-    } else {
-        sessionStorage.setItem("userName", userName);
-        location.href = "quiz.html"
-    }
-
-
-
-}
-// toast function
-
-
-function toast() {
-    // Get the snackbar DIV
-    var x = document.getElementById("snackbar");
-
-    // Add the "show" class to DIV
-    x.className = "show";
-
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
-}
-
-
-
+let No_Question = sessionStorage.getItem("question_count");
 
 let user_Name = sessionStorage.getItem("userName");
 let h2 = document.getElementById("welcome-name");
 h2.innerHTML = `Welcome  ${user_Name} `;
 
 
+
 function show(Ndata) {
+
     let question_area = document.querySelector("#questionArea");
     let questions = Ndata;
-    document.querySelector("#question-count").innerHTML = ` ${currentQuestion +1} / ${questions.length}`;
+    document.querySelector("#question-count").innerHTML = ` ${currentQuestion +1} / ${No_Question}`;
     question_area.innerHTML = `<h5>${currentQuestion + 1}. ${questions[currentQuestion]["question"]} </h5>
 
     <ul class="options col-md-4">
@@ -87,13 +52,17 @@ function fetchData() {
 }
 
 
+
+
+
+// ---------- next function-----------------
+
+
 function next() {
-
-
-
     fetch("./assets/json/quize.json")
         .then(function(response) {
             return response.json();
+
         })
         .then(function(data) {
             let questions = data;
@@ -103,24 +72,27 @@ function next() {
 
             let userAnswer = document.querySelector(".activequiz").id;
 
-            document.querySelector("#question-count").innerHTML = ` ${currentQuestion +1} / ${questions.length}`;
+            document.querySelector("#question-count").innerHTML = ` ${currentQuestion +1} / ${No_Question}`;
 
+            users_answers.push(userAnswer)
             if (correctanswer == userAnswer) {
                 score = score + 2;
                 correctans_count++;
 
-
             } else Wrongans_count++;
 
+            if (currentQuestion == No_Question) {
 
-            if (currentQuestion == questions.length) {
                 let workarea = document.querySelector("#quiz");
-
                 document.querySelector("#nextbtn").classList.add("disabled")
-
                 workarea.innerHTML = workarea.innerHTML + `<button class="btn" onclick="submit()">sumbit</button>`;
 
-            } else fetchData();
+            } else {
+
+
+                fetchData();
+
+            }
         });
 
 
@@ -146,5 +118,10 @@ function submit() {
     sessionStorage.setItem("score", score);
     sessionStorage.setItem("correctans_count ", correctans_count);
     sessionStorage.setItem("Wrongans_count ", Wrongans_count);
+
+
+    let users_answersP = JSON.stringify(users_answers);
+    localStorage.setItem("users_answer", users_answersP);
     location.href = "result.html"
+
 }

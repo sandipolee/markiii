@@ -6,15 +6,15 @@
             "वि.स २०३९",
             "वि.स २०४०"
         ],
-        "correctIndex": 3
+        "correctIndex": 0
     },
     {
-        "question": "What is the scientific name of a butterfly?",
+        "question": "नेपालले दक्षिण एसियाको कति प्रतिशत भूभाग ओगटेको छ ?",
         "answers": [
-            "Apis",
-            "Coleoptera",
-            "Formicidae",
-            "Rhopalocera"
+            "२.४ प्रतिशत",
+            "२.८ प्रतिशत",
+            "२.९ प्रतिशत",
+            "२.७ प्रतिशत"
         ],
         "correctIndex": 3
     },
